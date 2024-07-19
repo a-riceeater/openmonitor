@@ -1,6 +1,6 @@
 #container {
     width: 375px;
-    height: 500px;
+    height: 375px;
     background-color: #C1BDB3;
     border-radius: 15px / 15px;
     position: fixed;
@@ -20,11 +20,27 @@
 }
 
 input {
-    width: 90%;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     border-bottom: 1px solid #3D3B3C;
     height: 35px;
     font-family: "Open Sans", sans-serif;
     background-color: transparent;
     margin-top: 15px;
+    margin-bottom: 15px;
+    outline: 0;
+    font-size: 14.5px;
+}
+
+#login-btn {
+    height: 35px;
+    width: calc(85% + 15px);
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 25px / 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
