@@ -1,0 +1,30 @@
+#container {
+    width: 375px;
+    height: 500px;
+    background-color: #C1BDB3;
+    border-radius: 15px / 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #3D3B3C;
+    height: 35px;
+    font-family: "Open Sans", sans-serif;
+    background-color: transparent;
+    margin-top: 15px;
+}
