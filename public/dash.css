@@ -1,0 +1,31 @@
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #323031;
+    text-align: center;
+}
+
+#sb-l {
+    font-size: 14px;
+    color: lightgray;
+    margin-top: 25px;
+    color: #C1BDB3;
+}
+
+#content {
+    position: fixed;
+    left: 100px;
+    height: 100%;
+    width: calc(100% - 100px);
+    top: 0;
+    padding-left: 35px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+#content > h1 {
+    color: #C1BDB3;
+}
