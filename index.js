@@ -22,6 +22,6 @@ app.get("/api/fetch-uptime", (req, res) => {
     })
 })
 
-app.listen(5050, () => {
-    console.log("openmonitor running on port 5050")
+app.listen(6060, () => {
+    console.log("openmonitor running on port 6060")
 })
