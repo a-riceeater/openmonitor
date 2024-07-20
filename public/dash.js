@@ -7,5 +7,5 @@ fetch("http://10.0.0.181:6060/api/fetch-uptime", {
 })
     .then((d) => d.json())
     .then((d) => {
-        document.querySelector("#upt-cont").innerText = d;
+        document.querySelector("#upt-cont").innerText = d.uptime;
     })
