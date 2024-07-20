@@ -18,15 +18,14 @@ app.get("/login", (req, res) => {
 app.get("/api/fetch-uptime", (req, res) => {
     const child = spawn('uptime', ['-p']);
     child.stdout.on("data", (data) => {
-        console.log(data);
-        res.send({ uptime: data })
+        console.log(data.toString());
+        res.send({ uptime: data.toString() })
     })
 
     child.stderr.on('data', (data) => {
         console.error(`Error: ${data}`);
     });
     
-    // Handle the exit event
     child.on('close', (code) => {
         console.log(`Child process exited with code ${code}`);
     });
