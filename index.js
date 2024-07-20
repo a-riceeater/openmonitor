@@ -19,7 +19,7 @@ app.get("/api/fetch-uptime", (req, res) => {
     const child = spawn('uptime', ['-p']);
     child.stdout.on("data", (data) => {
         console.log(data.toString());
-        res.send({ uptime: data.toString() })
+        res.send({ uptime: data.toString().replace("up ", "") })
     })
 
     child.stderr.on('data', (data) => {
