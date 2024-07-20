@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path")
 const crypto = require("crypto-js");
+const { spawn } = require("child_process");
 
 const app = express();
 
@@ -12,6 +13,13 @@ app.get("/", (req, res) => {
 
 app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "html", "login.html"))
+})
+
+app.get("/api/fetch-uptime", (req, res) => {
+    const child = spawn('uptime -p');
+    child.on("data", (data) => {
+        res.send({ uptime: data })
+    })
 })
 
 app.listen(5050, () => {
