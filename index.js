@@ -16,7 +16,7 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/api/fetch-uptime", (req, res) => {
-    const child = spawn('uptime -p');
+    const child = spawn('uptime', ['-p']);
     child.on("data", (data) => {
         res.send({ uptime: data })
     })
