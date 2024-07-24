@@ -19,5 +19,5 @@ fetch("/api/fetch-service-status", {
 })
     .then((d) => d.json())
     .then((d) => {
-        document.querySelector("#service-stat-cont").innerText = `${d.running}/${d.total}`
+        document.querySelector("#service-stat-cont").innerText = `${d.running.replaceAll("\n", "")}/${d.total.replaceAll("\n", "")}`
     })
