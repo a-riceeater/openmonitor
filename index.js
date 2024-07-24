@@ -16,6 +16,7 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/api/fetch-uptime", (req, res) => {
+    if (process.platform != 'linux') return res.send({ uptime: 'Not on linux' })
     const child = spawn('uptime', ['-p']);
     child.stdout.on("data", (data) => {
         console.log(data.toString());

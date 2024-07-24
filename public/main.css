@@ -4,3 +4,11 @@ body {
     background-color: #3D3B3C;
     font-family: "Open Sans", sans-serif;
 }
+
+:root {
+    --darkest: #323031;
+    --dark: #3D3B3C;
+    --mid: #7F7979;
+    --light: #C1BDB3;
+    --accent: #5F5B6B;
+}
