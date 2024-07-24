@@ -47,7 +47,7 @@ app.get("/api/fetch-service-status", (req, res) => {
 
         wc.stdout.on('data', (data) => {
             console.log(`Number of services: ${data}`);
-            totalServices = data;
+            totalServices = JSON.stringify(data);
             loadRunning();
         });
 
@@ -72,7 +72,7 @@ app.get("/api/fetch-service-status", (req, res) => {
         grep.stdout.pipe(wc.stdin);
 
         wc.stdout.on('data', (data) => {
-            runningServices = data;
+            runningServices = JSON.stringify(data);
             console.log(`Number of running services: ${data}`);
             res.send({ total: totalServices, running: runningServices });
         });
