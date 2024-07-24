@@ -1,4 +1,4 @@
-fetch("http://10.0.0.181:6060/api/fetch-uptime", {
+fetch("/api/fetch-uptime", {
     method: "GET",
     headers: {
         'Content-Type': 'application/json'
@@ -8,4 +8,16 @@ fetch("http://10.0.0.181:6060/api/fetch-uptime", {
     .then((d) => d.json())
     .then((d) => {
         document.querySelector("#upt-cont").innerText = d.uptime;
+    })
+
+fetch("/api/fetch-service-status", {
+    method: "GET",
+    headers: {
+        'Content-Type': 'application/json'
+
+    }
+})
+    .then((d) => d.json())
+    .then((d) => {
+        document.querySelector("#service-stat-cont").innerText = `${d.running}/${d.total}`
     })
